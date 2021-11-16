@@ -29,7 +29,7 @@ public class JWTInterceptor implements HandlerInterceptor {
         String token = request.getHeader("token");
         log.info("当前token为：{}", token);
 
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap();
         try {
             JWTUtils.verify(token);
             return true;
